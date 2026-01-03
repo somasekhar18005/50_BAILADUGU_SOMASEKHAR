@@ -88,15 +88,7 @@ Validator agent reviews and refines the output
 
 Final validated response is returned to the user
 
-📂 Project Structure (Sample)
-.
-├── agents/
-│   ├── planner.py
-│   ├── executor.py
-│   └── validator.py
-├── app.py
-├── requirements.txt
-└── README.md
+
 
 🚀 Future Enhancements
 
