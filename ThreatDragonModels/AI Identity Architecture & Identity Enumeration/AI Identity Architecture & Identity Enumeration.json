@@ -78,12 +78,12 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "46526287-9dfc-4e27-b610-4a449cbae1c3",
                 "a1d012d7-6dbf-44f3-a7cb-963824b4a42e",
                 "e0ca242d-8699-45f9-9659-47671b410a01",
                 "a55aa193-0fea-4ec1-beda-ade7691487bd",
                 "8163379d-9f0a-42ef-a984-814669092d27",
-                "e1238c23-d97c-4023-9d2d-d246cfe7d05d"
+                "e1238c23-d97c-4023-9d2d-d246cfe7d05d",
+                "aa0c2620-2f47-47f6-ac21-2ab429bac2a5"
               ],
               "containedElements": [
                 "3ee8d5db-582d-4b00-b156-09827865857c",
@@ -94,13 +94,6 @@
                 "275e1ca3-02e9-4580-b3ef-07b025d52997",
                 "089b971e-22db-497e-b02f-85ed4a3999be"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -256,8 +249,8 @@
           },
           {
             "position": {
-              "x": 375,
-              "y": 100
+              "x": 385,
+              "y": 80.00000000000009
             },
             "size": {
               "width": 100,
@@ -268,8 +261,8 @@
                 "text": "AIAgent\nOrchestrator"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -366,12 +359,67 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "182f17c9-61d6-4819-86ea-b5ead2589893",
+                  "title": "Direct Prompt Injection",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Adversarial user input overrides system instructions to hijack agent reasoning and force execution of unauthorized tools or data access.",
+                  "mitigation": "Implement dual LLM input/output guardrails, enforce strict prompt-to-data delimiter separation, and apply least-privilege tool execution permissions.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "c5963a5d-6fc6-49b7-9e07-db9c82849d02",
+                  "title": "Context & Memory Exfiltration",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Malicious prompts trick the agent into dumping prior user sessions, chat history, or internal system instructions.",
+                  "mitigation": "Sanitize context buffers and implement strict session-level memory segregation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "14d2a7b0-0fdf-4273-8b89-035a6918f52e",
+                  "title": "Tool Execution Priv Escalation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Core AI orchestration engine coordinating user prompts, tool executions, and LLM inference calls.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1108,8 +1156,8 @@
                 "text": "RAG Pipeline"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1206,12 +1254,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "dfe89116-2d1c-4287-9d00-c0addba4c2bc",
+                  "title": "Knowledge Base",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Attacker injects malicious, misleading, or backdoor text into retrieval documents to hijack agent responses.",
+                  "mitigation": "Enforce cryptographic signing of data sources, role-based ingestion pipelines, and strict embedding verification.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1317,64 +1387,6 @@
               "cell": "8551eed1-173e-47a8-b054-5543b2eea73f",
               "port": "3312e35e-58c7-4c5d-96ed-1fee8cf41383"
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "ae3d232b-d2d6-4c98-88ab-e6141cefd595"
-              ]
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "46526287-9dfc-4e27-b610-4a449cbae1c3",
-            "source": {
-              "x": 430,
-              "y": 200
-            },
-            "target": {
-              "cell": "47b0e5eb-a87e-44f8-ae74-e32e5c845ebe",
-              "port": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
-            },
-            "vertices": [
-              {
-                "x": 390,
-                "y": 260
-              },
-              {
-                "x": 390,
-                "y": 310
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -1820,6 +1832,54 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tool Request+Service Identity",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae3d232b-d2d6-4c98-88ab-e6141cefd595"
+              ]
+            },
+            "labels": [
+              "Tool Request+Service Identity"
+            ],
+            "id": "aa0c2620-2f47-47f6-ac21-2ab429bac2a5",
+            "source": {
+              "x": 400,
+              "y": 180
+            },
+            "target": {
+              "cell": "47b0e5eb-a87e-44f8-ae74-e32e5c845ebe",
+              "port": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
+            }
+          },
+          {
             "position": {
               "x": 830,
               "y": 500
@@ -1941,8 +2001,8 @@
           },
           {
             "position": {
-              "x": 770,
-              "y": -80
+              "x": 845.9999999999976,
+              "y": -150
             },
             "size": {
               "width": 130,
@@ -1953,8 +2013,8 @@
                 "text": "LLM Provider"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2051,12 +2111,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "fdd8062f-71ec-4e51-b2ac-ee501a3c24e6",
+                  "title": "Static API Key Leakage",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Static LLM master API key exposed in outbound request headers, proxy traces, or plain-text application logs during model invocations.",
+                  "mitigation": "Store API keys in an enterprise Key Management Service (KMS/Vault), inject via ephemeral proxy headers, and enforce payload log masking.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -2184,6 +2266,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "bailadugu",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
