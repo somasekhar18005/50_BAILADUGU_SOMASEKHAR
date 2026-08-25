@@ -44,7 +44,8 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "4d7c806e-2551-47a3-ab65-ef6eaafd573e"
+                "4d7c806e-2551-47a3-ab65-ef6eaafd573e",
+                "535ea982-8df6-4776-b513-f79cfa28f01d"
               ],
               "containedElements": [
                 "2161a58b-8872-4db7-856b-1549347e7b9d",
@@ -54,8 +55,8 @@
           },
           {
             "position": {
-              "x": 210.00000000000125,
-              "y": -25.000000000000057
+              "x": 210,
+              "y": -35
             },
             "size": {
               "width": 500,
@@ -77,10 +78,12 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "a55aa193-0fea-4ec1-beda-ade7691487bd",
                 "46526287-9dfc-4e27-b610-4a449cbae1c3",
                 "a1d012d7-6dbf-44f3-a7cb-963824b4a42e",
-                "e0ca242d-8699-45f9-9659-47671b410a01"
+                "e0ca242d-8699-45f9-9659-47671b410a01",
+                "a55aa193-0fea-4ec1-beda-ade7691487bd",
+                "8163379d-9f0a-42ef-a984-814669092d27",
+                "e1238c23-d97c-4023-9d2d-d246cfe7d05d"
               ],
               "containedElements": [
                 "3ee8d5db-582d-4b00-b156-09827865857c",
@@ -88,13 +91,12 @@
                 "e3740cb5-4512-4781-b112-cd794a531ed9",
                 "47b0e5eb-a87e-44f8-ae74-e32e5c845ebe",
                 "b06d646b-c86f-48d9-a1c6-1ff4a2b3f981",
-                "275e1ca3-02e9-4580-b3ef-07b025d52997"
+                "275e1ca3-02e9-4580-b3ef-07b025d52997",
+                "089b971e-22db-497e-b02f-85ed4a3999be"
               ]
             },
             "tools": {
               "items": [
-                "boundary",
-                "button-remove",
                 "boundary",
                 "button-remove"
               ],
@@ -974,8 +976,8 @@
           },
           {
             "position": {
-              "x": 305,
-              "y": 20
+              "x": 330,
+              "y": -10
             },
             "size": {
               "width": 100,
@@ -1232,54 +1234,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "User Authentication",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "ae3d232b-d2d6-4c98-88ab-e6141cefd595"
-              ]
-            },
-            "labels": [
-              "User Authentication"
-            ],
-            "id": "a55aa193-0fea-4ec1-beda-ade7691487bd",
-            "source": {
-              "x": 143,
-              "y": 76
-            },
-            "target": {
-              "cell": "3ee8d5db-582d-4b00-b156-09827865857c",
-              "port": "43f44a51-0a7e-4f9b-817b-9487b15c6e4b"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "LLM Request",
               "description": "",
               "outOfScope": false,
@@ -1415,6 +1369,10 @@
               {
                 "x": 390,
                 "y": 260
+              },
+              {
+                "x": 390,
+                "y": 310
               }
             ]
           },
@@ -1615,166 +1573,250 @@
             "target": {
               "cell": "1410ad53-6b5b-41b4-818b-64f11b07e73b",
               "port": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
             },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Prompt Request\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae3d232b-d2d6-4c98-88ab-e6141cefd595"
+              ]
+            },
+            "labels": [
+              "Prompt Request\n"
+            ],
+            "id": "a55aa193-0fea-4ec1-beda-ade7691487bd",
+            "source": {
+              "x": 143,
+              "y": 76
+            },
+            "target": {
+              "cell": "3ee8d5db-582d-4b00-b156-09827865857c",
+              "port": "43f44a51-0a7e-4f9b-817b-9487b15c6e4b"
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": 100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OIDC / PKCE Login + MFA",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "c7e611d5-fb7f-416b-9e83-4b05b19c57f2"
+              ]
+            },
+            "labels": [
+              "OIDC / PKCE Login + MFA"
+            ],
+            "id": "535ea982-8df6-4776-b513-f79cfa28f01d",
+            "source": {
+              "x": 50,
+              "y": 110
+            },
+            "target": {
+              "cell": "8551eed1-173e-47a8-b054-5543b2eea73f",
+              "port": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Service Authentication",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae3d232b-d2d6-4c98-88ab-e6141cefd595"
+              ]
+            },
+            "labels": [
+              "Service Authentication"
+            ],
+            "id": "8163379d-9f0a-42ef-a984-814669092d27",
+            "source": {
+              "x": 315,
+              "y": 450
+            },
+            "target": {
+              "cell": "089b971e-22db-497e-b02f-85ed4a3999be",
+              "port": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Service Authentication",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "ae3d232b-d2d6-4c98-88ab-e6141cefd595"
+              ]
+            },
+            "labels": [
+              "Service Authentication"
+            ],
+            "id": "e1238c23-d97c-4023-9d2d-d246cfe7d05d",
+            "source": {
+              "x": 555,
+              "y": 560
+            },
+            "target": {
+              "cell": "275e1ca3-02e9-4580-b3ef-07b025d52997",
+              "port": "56d031b3-c931-4e76-bad0-0a0c888c2f53"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API Key Authentication",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "API Key Authentication"
+            ],
+            "id": "7b5c4e8f-6cd6-4b6a-bd3c-53639a58b39a",
+            "source": {
+              "x": 400,
+              "y": 10
+            },
+            "target": {
+              "cell": "52573e3c-8aaf-428c-9cc4-3719be43a1f6",
+              "port": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
             }
           },
           {
@@ -2005,6 +2047,126 @@
             "data": {
               "type": "tm.Process",
               "name": "LLM Provider",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 265,
+              "y": 510
+            },
+            "size": {
+              "width": 100,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "MCP Server"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "9e1b2f46-2e81-4b09-92bc-d8d19a98a366"
+                },
+                {
+                  "group": "right",
+                  "id": "3312e35e-58c7-4c5d-96ed-1fee8cf41383"
+                },
+                {
+                  "group": "bottom",
+                  "id": "56d031b3-c931-4e76-bad0-0a0c888c2f53"
+                },
+                {
+                  "group": "left",
+                  "id": "43f44a51-0a7e-4f9b-817b-9487b15c6e4b"
+                }
+              ]
+            },
+            "id": "089b971e-22db-497e-b02f-85ed4a3999be",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Process",
+              "name": "MCP Server",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
